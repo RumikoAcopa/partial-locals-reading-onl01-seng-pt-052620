@@ -1,7 +1,5 @@
 Information About the Post
-<ul>
-  <li> <%= @author.name %></li>
-  <li> <%= @author.hometown %></li>
-</ul>
+<%= render partial: "authors/author", locals: {post_author: @post.author} %>
 <%= @post.title %>
 <%= @post.content %>
+<!-- #We are being more explicit about our dependencies, reducing lines of code in our codebase, and reducing the scope of the author variable.
